@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Space+Grotesk:wght@300;400;500;600&family=Fira+Code&display=swap');
+
+:root {
+  --font-unbounded: 'Unbounded', sans-serif;
+  --font-space-grotesk: 'Space Grotesk', sans-serif;
+  --font-fira: 'Fira Code', monospace;
+}
+
+body {
+  background-color: #020205;
+  color: #a5b4fc;
+  font-family: var(--font-space-grotesk);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.text-display {
+  font-family: var(--font-unbounded);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  line-height: 0.8;
+}
+
+.noir-card {
+  background: rgba(10, 10, 15, 0.8);
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  backdrop-filter: blur(20px);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.noir-card:hover {
+  border-color: rgba(0, 212, 255, 0.4);
+  background: rgba(10, 10, 15, 0.95);
+  box-shadow: 0 0 40px rgba(0, 212, 255, 0.1);
+}
+
+.btn-noir {
+  background: #00d4ff;
+  color: #020205;
+  padding: 16px 40px;
+  font-family: var(--font-unbounded);
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+}
+
+.btn-noir:hover {
+  background: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+}
+
+.section-border {
+  border-top: 1px solid rgba(0, 212, 255, 0.05);
+}
+
+/* Blue Ethereal Glows */
+.blue-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 102, 255, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glitch-text:hover {
+  animation: glitch 0.3s linear infinite;
+  color: #00d4ff;
+  text-shadow: 2px 0 rgba(0, 212, 255, 0.5), -2px 0 rgba(0, 212, 255, 0.3);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020205;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00d4ff;
+}
